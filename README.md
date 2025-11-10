@@ -1,0 +1,2 @@
+# cv_homework2_MNIST_MLPvsCNN
+cv课的第二次作业，比较MLP和CNN模型
