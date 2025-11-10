@@ -1,0 +1,31 @@
+Model,LayerName,LayerType,InputShape,OutputShape,Params,Accuracy-epoch5
+MLP_A (784-512-256-10),net.flatten,Flatten,"(1, 1, 28, 28)","(1, 784)",0,97.90%
+MLP_A (784-512-256-10),net.fc1,Linear,"(1, 784)","(1, 512)",401920,
+MLP_A (784-512-256-10),net.relu1,ReLU,"(1, 512)","(1, 512)",0,
+MLP_A (784-512-256-10),net.fc2,Linear,"(1, 512)","(1, 256)",131328,
+MLP_A (784-512-256-10),net.relu2,ReLU,"(1, 256)","(1, 256)",0,
+MLP_A (784-512-256-10),net.fc3,Linear,"(1, 256)","(1, 10)",2570,
+MLP_A (784-512-256-10),<TOTAL>,-,-,-,535818,
+CNN_A (4/8 filters),features.conv1,Conv2d,"(1, 1, 28, 28)","(1, 4, 24, 24)",104,97.24%
+CNN_A (4/8 filters),features.relu1,ReLU,"(1, 4, 24, 24)","(1, 4, 24, 24)",0,
+CNN_A (4/8 filters),features.pool1,MaxPool2d,"(1, 4, 24, 24)","(1, 4, 12, 12)",0,
+CNN_A (4/8 filters),features.conv2,Conv2d,"(1, 4, 12, 12)","(1, 8, 8, 8)",808,
+CNN_A (4/8 filters),features.relu2,ReLU,"(1, 8, 8, 8)","(1, 8, 8, 8)",0,
+CNN_A (4/8 filters),features.pool2,MaxPool2d,"(1, 8, 8, 8)","(1, 8, 4, 4)",0,
+CNN_A (4/8 filters),classifier.flatten,Flatten,"(1, 8, 4, 4)","(1, 128)",0,
+CNN_A (4/8 filters),classifier.fc,Linear,"(1, 128)","(1, 10)",1290,
+CNN_A (4/8 filters),<TOTAL>,-,-,-,2202,
+MLP_B (784-8-10),net.flatten,Flatten,"(1, 1, 28, 28)","(1, 784)",0,91.13%
+MLP_B (784-8-10),net.fc1,Linear,"(1, 784)","(1, 8)",6280,
+MLP_B (784-8-10),net.relu1,ReLU,"(1, 8)","(1, 8)",0,
+MLP_B (784-8-10),net.fc2,Linear,"(1, 8)","(1, 10)",90,
+MLP_B (784-8-10),<TOTAL>,-,-,-,6370,
+CNN_B (8/16 filters),features.conv1,Conv2d,"(1, 1, 28, 28)","(1, 8, 24, 24)",208,98.60%
+CNN_B (8/16 filters),features.relu1,ReLU,"(1, 8, 24, 24)","(1, 8, 24, 24)",0,
+CNN_B (8/16 filters),features.pool1,MaxPool2d,"(1, 8, 24, 24)","(1, 8, 12, 12)",0,
+CNN_B (8/16 filters),features.conv2,Conv2d,"(1, 8, 12, 12)","(1, 16, 8, 8)",3216,
+CNN_B (8/16 filters),features.relu2,ReLU,"(1, 16, 8, 8)","(1, 16, 8, 8)",0,
+CNN_B (8/16 filters),features.pool2,MaxPool2d,"(1, 16, 8, 8)","(1, 16, 4, 4)",0,
+CNN_B (8/16 filters),classifier.flatten,Flatten,"(1, 16, 4, 4)","(1, 256)",0,
+CNN_B (8/16 filters),classifier.fc,Linear,"(1, 256)","(1, 10)",2570,
+CNN_B (8/16 filters),<TOTAL>,-,-,-,5994,
